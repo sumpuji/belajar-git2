@@ -1,0 +1,390 @@
+* {
+font-family: "Montserrat";
+box-sizing: content-box;
+scroll-behavior: smooth;
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+}
+
+
+
+h1 {
+    font-weight: 700;
+    font-size: 28px;
+    }
+a {
+    text-decoration: none;
+    color: black;
+}
+
+p {
+    color:#979797;
+    margin: 0 0 16px 0;
+    font-size: 24px;
+}
+
+section {
+    padding: 64px 128px;
+}
+
+
+.btn {
+    background-color: #FFC108;
+    color: white;
+    padding: 8px 24px ;
+}
+.btn-alt {
+    background-color: white;
+    color: black;
+    margin-right: 16px;
+    border: 2px solid  #FFC108;
+    }
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 128px;
+    column-gap: 16px;
+    position: sticky;
+    top: 0;
+    background-color: rgb(173, 185, 150);
+    z-index: 5;
+}
+
+
+#header h1 {
+    margin: 0;
+    /* animation: flash 1s  infinite; */
+    animation: bounceIn 1s;
+}
+
+@keyframes bounceIn {
+    0% {
+        filter: opacity(0);
+        transform: translateY(-20px);
+    }
+    35% {
+        filter: opacity(0.25);
+        transform: translateY(0);
+    }
+    70% {
+        filter: opacity(0.5);
+        transform: translateY(-10px);
+    }
+    100% {
+        filter: opacity(1);
+        transform: translateY(0);
+    }
+}
+
+@keyframes flash {
+    form {
+        filter: opacity(0);
+    }
+    to {
+        filter: opacity(1);
+    }
+}
+
+nav a:hover {
+    color: yellow;
+}
+nav > a {
+    margin-left: 12px;
+    color: black ;
+}
+
+#landing p {
+    margin-bottom: 32px;
+}
+
+.landing p {
+    margin-bottom: 32px;
+    
+}
+
+#landing {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 16px;
+}
+
+#landing > div {
+    width: 50%;
+}
+
+about {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 16px;
+}
+
+#about > div {
+    width: 50%;
+}
+
+#about-coz {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+    margin-top: 72px;
+}
+
+.about-coz-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-coz-item div {
+    width: 50px;
+    height: 10px;
+    background-color: #FFC108;
+    margin-bottom: 16px;
+}
+
+.service-one {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.service-one h1 {
+    position: relative;
+}
+
+.service-one h1::before {
+    content: "";
+    width: 50px;
+    height: 50px;
+    background: url("./images/accent1.svg");
+    position: absolute;
+    left: -20px;
+    top: -10px;
+    z-index: -1;
+}
+
+.service-two {
+    margin-top: 72px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 50px;
+}
+.service-two-1 {
+    box-shadow: 6px 4px 4px #979797;
+}
+
+.service-two-1:hover {
+    transform: scale(1.15);
+}
+
+.service-two-1:hover img {
+    filter: grayscale(0);
+}
+
+.service-two-1 img {
+    width: 100%;
+    filter: grayscale(1);
+}
+
+.service-two-1 h2 {
+    padding: 0 16px;
+}
+
+.service-two-1 p {
+    font-size: 16px;
+    padding: 0 16px;
+}
+
+#contac h1 {
+    position: relative;
+}
+
+#contac > h1::before {
+    content: "";
+    width: 60px;
+    height: 60px;
+    background: url("./images/accent2.svg");
+    position: absolute;
+    left: -20px;
+    top: -10px;
+    z-index: -1; 
+}
+
+.contac-detail {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 72px;
+    column-gap: 128px;
+} 
+
+form {
+    display: flex;
+    flex-direction: column;
+    border: 3px solid #FFC108;
+    padding: 64px 24px;
+}
+
+form h1 {
+    font-size: 32px;
+    text-align: center;
+
+}
+
+form button {
+    border: none;
+}
+
+form button:hover {
+    cursor: pointer;
+}
+
+.form-group {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 32px;
+    margin-top: 32px;
+    grid-template-areas: "name subject"
+                        "email phone"
+                        "message message";
+                        
+}
+
+
+
+#input-name {
+    grid-area: name;
+}
+
+#input-subject {
+    grid-area: subject;
+}
+
+#input-email {
+    grid-area: email;
+}
+#input-phone {
+    grid-area: phone;
+}
+
+#input-message {
+    grid-area: message;
+}
+
+
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 32px;
+}
+
+.input-group label {
+    font-weight: 700;
+    margin-bottom: 16px;
+    font-size: 24px;
+}
+
+.input-group input {
+    border: none;
+    outline: none;
+    border-bottom: 1px solid black;
+    font-size: 20px;
+
+    }
+
+.input-group input:focus {
+    border-bottom: 2px solid #FFC108;
+}  
+
+footer {
+    padding: 16px 128px;
+    background-color: #FFC108;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer p {
+    color: white;
+    width: 50%;
+}
+
+.icon {
+    display: flex;
+    gap: 16px;
+}
+
+@media only screen and (max-width: 1200px) {
+    .service-two {
+        gap: 24px;
+    }
+}
+
+.contac-detail form {
+    gap: 24px;
+}
+
+
+
+
+@media only screen and (max-width: 992px) {
+    #header, #footer {
+        padding: 16px; 32px;
+    }
+    section {
+        padding: 16px; 32px;
+    }
+
+    #landing {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    #landing > div {
+        width: 100%;
+    }
+
+    #about {
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #about > div {
+        width: 100%;
+    }
+
+    #service-one {
+        gap: 16px;
+    }
+
+    .contac-detail {
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        row-gap: 64px;
+    }
+
+}
+
+
+
+
+
+
+
+ 
+
+
